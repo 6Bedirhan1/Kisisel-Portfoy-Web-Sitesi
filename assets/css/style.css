@@ -1,0 +1,556 @@
+/* Genel Sayfa Stili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #90caf9);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Başlık ve Navigasyon Menüsü Stili */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+.main-nav-item {
+    display: inline-block;
+}
+
+.main-nav-item-a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #0d47a1;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 15px;
+    border: 2px solid #0d47a1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-width: 150px; /* Minimum genişlik ayarı */
+}
+
+
+.main-nav-item-a:hover {
+    color: #fff;
+    background-color: #0d47a1;
+    border-color: #1994b0;
+}
+
+/* Profil Resmi Stili */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    margin-bottom: 20px;
+    border: 4px solid #0d47a1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hoş Geldiniz Mesajı ve Ana İçerik */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    flex-direction: column;
+}
+
+hr{
+    margin-top: 10px;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0d47a1;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+}
+
+#date-time {
+    font-size: 1.2rem;
+    color: #0d47a1;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+/* İletişim Formu Stili */
+.contact-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Geçiş için görünür sınıf */
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section h2 {
+    font-size: 2.3rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Elemanları */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #1964b0;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1994b0;
+}
+
+textarea {
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #0d47a1;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #093a7a;
+}
+
+/* Hata Mesajı */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+}
+
+/* Placeholder için stil */
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+
+/* Hakkımda Bölümü */
+.about-body-section {
+    background-image: url('../img/resim2.jpg');
+    background-size: cover;
+    overflow-x: hidden;  /* Overflow'yu gizleyerek animasyonun düzgün görünmesini sağlıyoruz */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0;  /* Başlangıçta kutu görünmez */
+    transform: translateX(-100%);  /* Başlangıçta kutu ekranın dışında */
+    animation: slideIn 1s forwards;  /* Animasyonu başlatıyoruz */
+}
+
+/* Animasyon */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);  /* Başlangıçta kutu soldan ekran dışında */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);  /* Kutu yerine gelir */
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.personal-info p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.biography {
+    margin-top: 20px;
+}
+
+#longBio.hidden {
+    display: none;
+}
+
+.back-home {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-home button {
+    background-color: #172448;
+    padding: 10px 30px;
+    position: relative;
+    top: -30px;
+}
+
+.back-home button:hover {
+    background-color: #1f0d6d;
+}
+#toggleButton{
+    margin: 20px;
+    margin-left: 0px;
+}
+
+/* Projelerim Bölümü Stili */
+.projects-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Proje Kartları */
+#projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Kart Stili */
+.project-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Her satıra 3 kart sığdır */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #0d47a1;
+}
+
+/* Sayfa yüklenince geçiş efekti animasyonu */
+.fade-in-body {
+    animation: fadeInEffect 1s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 5px;
+    background-color: #0e60c5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.github-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.github-button:active {
+    transform: translateY(0);
+}
+
+/* Hover Efekti */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#filter-buttons {
+    margin-bottom: 20px;
+}
+
+#filter-buttons button {
+    background-color: #1964b0;
+    color: white;
+    padding: 10px 15px;
+    margin: 3px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#filter-buttons button:hover {
+    background-color: #1994b0;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    #projects-list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Küçük ekranlarda kartlar daha sıkı yerleşir */
+    }
+
+    .project-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .github-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        width: calc(50% - 20px); /* İki kart yan yana */
+    }
+}
+
+/* Daha küçük ekranlar için: 500px'den küçükse tek sütun */
+@media (max-width: 500px) {
+    .project-item {
+        width: 100%; /* Tek sütun */
+    }    
+}
+
+
+/* Modalın arkaplanı (arka plan bulanık ve koyu olacak) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Yarı saydam siyah */
+}
+
+/* Modal içeriği */
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal kapatma butonu (X işareti) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Modal içindeki resim */
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Modal içindeki açıklama */
+#modalDescription {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Alt Bilgi */
+footer {
+    background-color: #0d47a1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); color: #0d47a1; }
+    50% { transform: scale(1.05); color: #09316d; }
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 768px) {
+    .main-nav-items {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .main-nav-item-a {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .contact-section {
+        width: 80%;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: 10px;
+    }
+}

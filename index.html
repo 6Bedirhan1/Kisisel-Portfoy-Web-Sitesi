@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedirhan Özçelik Kişisel Portföy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="fade-in-body">
+    <!-- Site Başlığı ve Navigasyon -->
+    <header class="main-header">    
+        <nav class="main-nav"> 
+            <ul class="main-nav-items">
+                <li class="main-nav-item">
+                    <a href="index.html" class="main-nav-item-a main-nav-home">ANASAYFA</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="hakkımda.html" class="main-nav-item-a">HAKKIMDA</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="projelerim.html" class="main-nav-item-a">PROJELERİM</a>
+                </li>              
+            </ul> 
+        </nav>      
+    </header> 
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- Hoş Geldiniz Mesajı -->
+        <section>
+            <img src="assets/img/resim.jpg" alt="Kişisel Resim" class="profile-image">
+            <h2 id="welcome-heading">Bedirhan Özçelik<hr></h2> 
+            <p>Kişisel portföyüme hoş geldiniz! Teknolojiye olan tutkum ve yenilikçi bakış açımla hayata geçirdiğim projeleri burada keşfedebilirsiniz. Geliştirdiğim uygulamalar ve hakkımda daha fazla bilgi edinmek için sayfalar arasında gezinin, dijital dünyadaki yolculuğuma siz de katılın.<hr></p>
+            <div id="date-time"></div> <!-- Dinamik Tarih/Saat Göstergesi -->
+        </section>
+
+        <!-- İletişim Formu -->
+        <section class="contact-section hidden">
+            <h2 class="animate-fade">İletişim</h2>
+            <form id="contactForm">
+                <label for="name" class="animate-fade" style="font-weight: bold;">İsim</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı girin" class="animate-fade">
+            
+                <label for="email" class="animate-fade" style="font-weight: bold;">E-posta</label>
+                <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required class="animate-fade">
+            
+                <label for="message" class="animate-fade" style="font-weight: bold;">Mesaj</label>
+                <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın" required class="animate-fade"></textarea>
+            
+                <button type="submit" class="animate-fade">Gönder</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Site Altbilgisi -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Kişisel Portföy - Tüm Hakları Saklıdır.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:bedirhan.ozcelik61@gmail.com">bedirhan.ozcelik61@gmail.com</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+905063623676">+90 506 362 36 76</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

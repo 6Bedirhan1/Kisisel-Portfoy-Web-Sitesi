@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="fade-in-body">
+    <header class="main-header">    
+        <nav class="main-nav"> 
+            <ul class="main-nav-items">
+                <li class="main-nav-item">
+                    <a href="index.html" class="main-nav-item-a main-nav-home">ANASAYFA</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="hakkımda.html" class="main-nav-item-a">HAKKIMDA</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="projelerim.html" class="main-nav-item-a">PROJELERİM</a>
+                </li>              
+            </ul> 
+        </nav>      
+    </header> 
+
+    <section class="projects-section">
+        <h2>Projelerim</h2>
+        <div id="filter-buttons">
+            <button>Tüm Projeler</button>
+            <button>En Son Projeler</button>
+            <button>En Beğenilen Projeler</button>
+        </div>   
+        <div id="projects-list">
+            <div class="project-item" id="project1">               
+                <h3>ÖZ-ER CAFE Web Sitesi</h3>
+                <img src="assets/img/proje1.png" alt="Proje 1 Resmi">
+                <p>Bu proje, bir kafe için oluşturulmuş web geliştirme çalışmasıdır. Kafeye ait menü, sipariş verme, iletişim ve müşteri geri bildirim modülleri gibi işlevler içerir.</p>
+                <a href="https://6bedirhan1.github.io/OZER-CAFE/" target="_blank" class="github-button">Web Site Link</a>
+            </div>
+            <div class="project-item" id="project2">               
+                <h3>Kişi Yönetim Masaüstü Uygulaması</h3>
+                <img src="assets/img/proje2.png" alt="Proje 2 Resmi">
+                <p>Bu masaüstü uygulaması, kullanıcıların kişileri ekleyip, silebileceği ve mevcut kişiler üzerinde çeşitli filtreleme işlemleri yapabileceği bir kişi yönetim sistemi sunmaktadır.</p>
+                <a href="https://github.com/6Bedirhan1/MainProject" target="_blank" class="github-button">GitHub Repo Link</a>
+            </div>
+            <div class="project-item" id="project3">                
+                <h3>Dama Oyunu Masaüstü Uygulaması</h3>
+                <img src="assets/img/proje3.png" alt="Proje 3 Resmi">
+                <p>Bu proje, iki oyunculu (kullanıcı-kullanıcı veya kullanıcı-bilgisayar) bir dama oyununun kurallarına uygun bir masaüstü uygulamasını içermektedir. Oyun, Windows Forms veya WPF (Windows Presentation Foundation) kullanarak geliştirilir ve kullanıcı dostu bir arayüzle dama tahtasında hareket eden taşları içerir. Proje, kullanıcıların sıralı olarak taşlarını hareket ettirebildiği, rakip taşları yiyerek oyun ilerlemesini sağladığı ve oyun sonunda kazananın belirlendiği bir platform sunar.</p>
+                <a href="https://github.com/6Bedirhan1/MainProject" target="_blank" class="github-button">GitHub Repo Link</a>
+            </div>
+            <div class="project-item" id="project4">               
+                <h3>Mini Quiz Web Uygulaması</h3>
+                <img src="assets/img/proje4.png" alt="Proje 4 Resmi">
+                <p>Bu proje, frontend web geliştirme alanında bilgi seviyesini ölçmeye yönelik bir test/quiz uygulamasıdır. Kullanıcılar HTML, CSS, JavaScript ve ilgili diğer frontend teknolojileri hakkında çoktan seçmeli sorulara cevap vererek bilgilerini test edebilir.</p>
+                <a href="https://quiz-projesi-bedirhan-ozcelik.netlify.app/" target="_blank" class="github-button">Web Site Link</a>
+            </div>
+            <div class="project-item" id="project5">               
+                <h3>Araç Kiralama Sistemi Uygulaması</h3>
+                <img src="assets/img/proje5.png" alt="Proje 5 Resmi">
+                <p>Bu proje, Java programlama dili kullanılarak geliştirilen bir araç kiralama sisteminin konsol tabanlı uygulamasıdır. Uygulama, araç kiralama işlemlerini kolaylaştırmak için temel araç yönetimi, kullanıcı yönetimi ve kiralama süreçlerini sağlar. Sistem, araç kiralama işletmelerinin ihtiyaçlarına uygun olarak tasarlanmış olup, müşteri ve araç bilgilerini takip etmek, kiralama işlemlerini düzenlemek ve raporlama yapmak için temel özellikler sunar.</p>
+                <a href="https://github.com/6Bedirhan1/ce204-hw4-bedirhan-ozcelik" target="_blank" class="github-button">GitHub Repo Link</a>
+            </div>
+            <div class="project-item" id="project6">                
+                <h3>Yılan Oyunu Uygulaması</h3>
+                <img src="assets/img/proje6.png" alt="Proje 6 Resmi" width="300px" height="300px">
+                <p>Bu proje, klasik yılan oyununu C# dilinde geliştirilen bir konsol uygulaması olarak hayata geçirmeyi amaçlamaktadır. Yılan oyunu, kullanıcıya yön tuşlarıyla hareket ettirilen bir yılanın, ekrandaki yiyecekleri toplarken kendisine veya duvarlara çarpmadan mümkün olduğunca uzun süre hayatta kalmaya çalıştığı popüler bir oyundur.</p>
+                <a href="https://github.com/6Bedirhan1/ce103-hw5-bedirhan-ozcelik" target="_blank" class="github-button">GitHub Repo Link</a>
+            </div>
+        </div>
+        <!-- Modal Yapısı -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="Project Image" class="modal-img">
+                <div id="modalDescription"></div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/script.js"></script>  
+</body>
+</html>
